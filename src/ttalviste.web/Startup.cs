@@ -15,9 +15,15 @@ namespace ttalviste.web
     {
         public Startup(IHostingEnvironment env)
         {
-            Configuration = new Configuration()
-                .AddJsonFile("config.json")
+          var  configuration = new Configuration()
+                .AddJsonFile("default.json")
                 .AddEnvironmentVariables();
+            configuration.AddJsonFile("release.json");
+#if DEBUG
+            configuration.AddJsonFile("debug.json");
+#endif
+            var environMent = configuration.Get("System:Environment");
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; set; }
