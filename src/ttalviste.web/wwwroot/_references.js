@@ -7,3 +7,4 @@
 /// <reference path="../assets/js/ttalviste.js" />
 /// <reference path="lib/jquery.easing/jquery.easing.js" />
 /// <reference path="js/ttalviste.js" />
+/// <reference path="lib/bootstrap/js/npm.js" />
