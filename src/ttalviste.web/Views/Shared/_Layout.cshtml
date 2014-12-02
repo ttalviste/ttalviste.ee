@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Web and Software Development Consultancy">
     <meta name="author" content="ttalviste">
-
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
@@ -29,6 +28,7 @@
   ga('send', 'pageview');
     </script>
 </head>
+@{await FlushAsync(); }
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -62,6 +62,7 @@
         <!-- /.container -->
     </nav>
     <div class="container body-content">
+        @{await FlushAsync(); }
         @RenderBody()
         <hr />
         <!-- Map Section -->
@@ -85,6 +86,6 @@
         <!-- Custom Theme JavaScript -->
         <script src="~/js/ttalviste.js"></script>
 
-    @RenderSection("scripts", required: false)
+        @RenderSection("scripts", required: false)
 </body>
 </html>
