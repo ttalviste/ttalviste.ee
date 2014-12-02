@@ -1,5 +1,4 @@
 {
-    /* Click to learn more about project.json  http://go.microsoft.com/fwlink/?LinkID=517074 */
     "webroot": "wwwroot",
     "version": "1.0.0.10",
     "dependencies": {
@@ -16,7 +15,7 @@
         "Microsoft.Framework.Logging": "1.0.0-beta1",
         "Microsoft.Framework.Logging.Console": "1.0.0-beta1",
         "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta1",
-"ttalviste.common": "1.0.0-*"
+        "ttalviste.common": "1.0.0.2"
     },
     "commands": {
         /* Change the port number when you are self hosting this application */
@@ -41,6 +40,7 @@
     ],
     "scripts": {
         "postrestore": [ "npm install" ],
-        "prepare": [ "grunt bower:install" ]
+        "prepare": [ "grunt bower:install" ],
+        "postbuild": ["grunt bower:less"]
     }
 }
