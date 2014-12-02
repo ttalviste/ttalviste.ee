@@ -3,7 +3,7 @@
     ViewBag.Title = Model.PageTitle;
 }
 <!-- Intro Header -->
-<header class="intro" style="margin-top:100px">
+<header class="intro">
     <div class="intro-body">
         <div class="container">
             <div class="row">
@@ -18,12 +18,9 @@
         </div>
     </div>
 </header>
-
-
-@{
-    await Html.RenderPartialAsync("_Contact");
-}
-
 @{
     await Html.RenderPartialAsync("_About");
+}
+@{
+    await Html.RenderPartialAsync("_Contact");
 }
