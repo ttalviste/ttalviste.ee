@@ -10,7 +10,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">Sample</h1>
                     <p class="intro-text">Web and Systems development and consultancy</p>
-                    <a href="#about" class="btn btn-circle page-scroll">
+                    <a href="#news" class="btn btn-circle page-scroll">
                         <i class="fa fa-angle-double-down animated"></i>
                     </a>
                 </div>
@@ -18,9 +18,20 @@
         </div>
     </div>
 </header>
-@{
-    await Html.RenderPartialAsync("_About");
-}
-@{
-    await Html.RenderPartialAsync("_Contact");
-}
+<section id="news" class="news-section container content-section text-center">
+    @{
+        await Html.RenderPartialAsync("_News");
+    }
+</section>
+<!-- About Section -->
+<section id="about" class="container content-section text-center">
+    @{
+        await Html.RenderPartialAsync("_About");
+    }
+</section>
+
+<section id="contact" class="container content-section text-center">
+    @{
+        await Html.RenderPartialAsync("_Contact");
+    }
+</section>

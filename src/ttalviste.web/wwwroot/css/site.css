@@ -208,11 +208,11 @@ a:focus {
 .content-section {
   padding-top: 100px;
 }
-.download-section {
+.news-section {
   width: 100%;
   padding: 50px 0;
   color: #ffffff;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background: url(../img/news-bg.jpg) no-repeat center center scroll;
   background-color: #000000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -228,7 +228,8 @@ a:focus {
   .content-section {
     padding-top: 250px;
   }
-  .download-section {
+  .news-section {
+    margin-top: 50px;
     padding: 100px 0;
   }
   #map {
